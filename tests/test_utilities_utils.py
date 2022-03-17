@@ -23,6 +23,32 @@ from flask_app.utilities.utils import (
     write_file,
 )
 
+def test_check_constants():
+    print(" => Check if constants from constants.py are OK")
+    expected = True
+    if not (OUTPUT_PATH and isinstance(OUTPUT_PATH, str)):
+        print()
+        print("OUTPUT_PATH must be a string and not empty")
+        expected =  False
+
+    if not os.path.isdir(OUTPUT_PATH):
+        print()
+        print("Output directory does not exist!")
+        print(f"Target: {OUTPUT_PATH}")
+        expected =  False
+
+    if not (CSV_FILENAME and CSV_FILENAME == "users.csv"):
+        expected =  False
+
+    if not (
+            CSV_COLUMN_NAMES
+            and CSV_COLUMN_NAMES == "date,heure,pays,région,ville,question"):
+        print()
+        print("CSV_COLUMN_NAMES must be a string and not empty")
+        expected =  False
+
+    assert expected == True
+
 
 def test_remove_accents():
     print("=> Remove all accents from question")
