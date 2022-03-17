@@ -1,0 +1,89 @@
+.header{
+    height: 24vh;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.band{
+    max-height: 24vh;
+    flex-wrap: nowrap;
+}
+
+.loader{
+    position: fixed;
+    left: calc(50% - 75px);
+    top: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+
+.color-red{
+    color: maroon;
+}
+
+.chat{
+    background-color: rgb(48, 47, 47);
+    height: 65vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.user-message{
+    display: flex;
+    justify-content:flex-end;
+    margin-right:auto;
+}
+
+.user-message>.txt{
+    background-color: rgb(224, 170, 108);
+    border-radius: 10px;
+    max-width: 75%;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: left;
+    padding:5px;
+}
+
+.papy-message{
+    display: flex;
+    justify-content:flex-end;
+    margin-right:auto;
+}
+
+.papy-message>.txt{
+    background-color: rgb(144, 214, 247);
+    border-radius: 10px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-top: 5px;
+    text-align: left;
+    padding:5px;
+    overflow-x: scroll;
+}
+
+input{
+    width: 100vw;
+}
+
+.papybot-img{
+    height:20vh;
+}
+
+/* speech recognition */
+
+#speak-btn{
+    height: 38px;
+}
+
+.infoOnSpeech{
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+}
